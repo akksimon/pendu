@@ -10,11 +10,12 @@ def print_player_list():
 
     print("_______________________________________________________")
 
-def create_player():    newplayer = input("veuiller saisir un nom")
-   for i in players:
-       if (newplayer in i["nom"]):
-           print ("joueur existant")
-           create_player()
-       else:
-           players.append({"nom":nom, "score":0})
-           print("bienvenue")
+def create_player():
+    newplayer = input("veuiller saisir un nom")
+    for i in players:
+        if (newplayer in i["nom"]):
+            print ("joueur existant")
+            create_player()
+        else:
+            players.append({"nom":newplayer, "score":0})
+            print("bienvenue")
