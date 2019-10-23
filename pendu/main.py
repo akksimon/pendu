@@ -2,7 +2,9 @@
 
 import sys, os, platform
 from includes.pendu import *
+import player_list as playerlist
 
+playerlist.print_player_list()
 
 distrib = platform.system()
 playing = bool(show_menu())
