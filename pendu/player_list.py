@@ -1,8 +1,7 @@
 # config: utf-8
 
-def print_player_list():
+def print_player_list(players):
     print("\t\t\n\n===  Liste des joueurs  ===\n")
-    players = [{"nom": "simon", "score": 22}, {"nom": "mohammed", "score": 23}, {"nom": "romane", "score": 1000}]
     players.append({"nom":"zozo", "score":0})
 
     for i in players:
@@ -10,12 +9,13 @@ def print_player_list():
 
     print("_______________________________________________________")
 
-def create_player():
+def create_player(players):
     newplayer = input("veuiller saisir un nom")
     for i in players:
         if (newplayer in i["nom"]):
             print ("joueur existant")
-            create_player()
+            create_player(players)
         else:
             players.append({"nom":newplayer, "score":0})
             print("bienvenue")
+            break
