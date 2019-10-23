@@ -7,6 +7,7 @@ import random, time, os, platform, sys
 
 def show_hang(index = 0):
 	hanged = (
+			"\t\t                 \n\t\t                        \n\t\t                      \n\t\t                   \n\t\t                 \n",
 			"\t\t                 \n\t\t                        \n\t\t                      \n\t\t                   \n\t\t_________________\n",
 			"\t\t|                 \n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_________________\n",
 			"\t\t|'''''''''''''''|\n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_________________\n",
@@ -16,8 +17,7 @@ def show_hang(index = 0):
 			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|                 \n\t\t_________________\n",
 			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /  \n\t\t_________________\n",
 			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /\\\n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|                  \n\t\t|                 \n\t\t_____ SOON DEAD__\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|                  \n\t\t|                 \n\t\t_____ YOU DIED___\n",
+			"\t\t|'''''''''''''''|\n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_YOU DIED__\\/)-o\n",
 	)
 	#	count = 0
 	#	for i in hanged:
@@ -111,4 +111,4 @@ def pendu(secret_word):
 			print("  ***\n\n")
 			show_hang(10)
 
-	time.sleep(4)
+	time.sleep(3)
