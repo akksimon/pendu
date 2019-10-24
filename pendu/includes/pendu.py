@@ -39,6 +39,7 @@ def pendu(secret_word):
 
 	if alive < 9:
 		print("\n\tBravo ! Vous avez gagné en {} coups !".format(count))
+
 	else:
 		if distrib == "Windows":
 			os.system("cls")

@@ -1,12 +1,12 @@
 # config: utf-8
 
 
-def show_menu():
+def show_menu(player):
     """Main menu of the game
     """
-    print("\n\n\t\t==========  Bienvenue sur le jeu du pendu !  ==========\n\n")
+    print("\n\n\t\t==========  Bienvenue ", player, "sur le jeu du pendu !  ==========\n\n")
     print("\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /\\\n\t\t_________________\n")
-    return int(input("\t\t(1) : Jouer\n\t\t(0) : Quitter\n\n\t\tChoix : "))
+    return int(input("\t\t(1) : Jouer\n\t\t(0) : Retour menu principal\n\n\t\tChoix : "))
 
 def show_hang(index = 0):
 	hanged = (

@@ -20,9 +20,3 @@ def add_letter(secret_word, player_word, letter):
 
 
 
-
-
-
-
-
-

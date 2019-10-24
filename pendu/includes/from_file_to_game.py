@@ -37,3 +37,5 @@ def put_new_player(newplayerlist):
             json.dump(newplayerlist, file)
     except:
         sys.exit("Erreur d'ajout du nouveau joueur à la liste")
+
+
