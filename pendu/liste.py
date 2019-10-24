@@ -1,24 +1,29 @@
-# config: utf-8
+d = {"nom": "Le Docteur", "Origine": "Gallifrey", "Race": ["Maître du temps","virtu"]}
 
-# demander le nombre d'obs
+v = "nom"
 
-n = int(input("Nombre d'obs. = "))
+print(v in d.keys())
 
-# créer une liste vide
+d[v] = "virtus"
 
-lst = []
+print(d)
 
-# ajouter les valeurs
+# def fonvirtus():
 
-for i in range(0, n):
-    lst.append(float(input("Valeur = ")))
+#     try:
 
-# effectuer la somme
-somme = 0.0
+#         print(" - ".join(d.keys()))
 
-for i in range(len(lst)):
-    somme = somme + lst[i]
+#         val = input("coucou")
 
-# affichage
+#         print(d[val])
 
-print(somme)
+#     except:
+
+#         return False
+
+#
+
+#
+
+# fonvirtus()

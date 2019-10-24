@@ -3,10 +3,14 @@
 import sys, os, platform
 from includes.pendu import *
 import player_list as playerlist
+from includes.from_file_to_game import *
+from includes.show_hanged import *
 
-players = [{"nom": "simon", "score": 22}, {"nom": "mohammed", "score": 23}, {"nom": "romane", "score": 1000}]
 
-playerlist.create_player(players)
+players = get_player_list()
+playerlist.print_player_list(players)
+players = playerlist.create_player(players)
+print("Apres ajout du joueur on relis le fichier")
 playerlist.print_player_list(players)
 
 distrib = platform.system()
@@ -23,3 +27,4 @@ while playing:
         os.system("clear")
     playing = bool(show_menu())
 sys.exit("\n\t*** See you soon ! ***\n")
+

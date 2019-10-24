@@ -1,71 +1,12 @@
 # config: utf-8
 
 import random, time, os, platform, sys
+from includes.show_hanged import *
+from includes.check_letter import *
 
-"""Module pour le jeu du Pendu.
+""" Module principal pour le jeu du Pendu.
 """
 
-def show_hang(index = 0):
-	hanged = (
-			"\t\t                 \n\t\t                        \n\t\t                      \n\t\t                   \n\t\t                 \n",
-			"\t\t                 \n\t\t                        \n\t\t                      \n\t\t                   \n\t\t_________________\n",
-			"\t\t|                 \n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|                  \n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|               |  \n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|  \n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|                 \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /  \n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /\\\n\t\t_________________\n",
-			"\t\t|'''''''''''''''|\n\t\t|                \n\t\t|                  \n\t\t|                 \n\t\t_YOU DIED__\\/)-o\n",
-	)
-	#	count = 0
-	#	for i in hanged:
-	#	print(count)
-	#	print(i)
-	#	count += 1
-
-	print(hanged[index])
-
-def get_secret_word():
-	""" Récupération aléatoire du mot à deviner dans le fichier 'listemystere'
-	"""
-	try:
-		with open("listemystere.txt", "r") as file:
-			words_list = file.readlines()
-	except:
-		sys.exit("Erreur : le fichier 'listemystere' est introuvable...")
-            
-	secret_word = random.choice(words_list)
-	secret_word = secret_word.rstrip('\n')
-	secret_word = secret_word.upper()
-
-	return secret_word
-
-def show_menu():
-	"""Main menu
-    """
-	print("\n\n\t\t==========  Bienvenue sur le jeu du pendu !  ==========\n\n")
-	print("\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|              /|\\\n\t\t|              /\\\n\t\t_________________\n")
-	return int(input("\t\t(1) : Jouer\n\t\t(0) : Quitter\n\n\t\tChoix : "))
-
-def check_letter(secret_word, player_word, letter):
-	"""Vérification de la présence de la lettre dans le mot mystère
-        On check aussi que le mot n'a pas déjà été demandé
-    """
-	for i in range(len(secret_word)):
-		j = secret_word[i]
-		if secret_word[i] == letter and j not in player_word:
-			return True
-	return False
-
-def add_letter(secret_word, player_word, letter):
-	"""Mise à jour du mot du joueur avec la lettre nouvellement trouvée
-    """
-	for i in range(len(secret_word)):
-		if secret_word[i] == letter:
-			player_word[i] = letter
-	return player_word
 
 def pendu(secret_word):
 	"""Fonction principale du jeu
@@ -111,4 +52,4 @@ def pendu(secret_word):
 			print("  ***\n\n")
 			show_hang(10)
 
-	time.sleep(3)
+	time.sleep(4)
