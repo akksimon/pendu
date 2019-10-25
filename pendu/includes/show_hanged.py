@@ -16,7 +16,7 @@ def show_hang(index = 0):
 			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|                  \n\t\t|                 \n\t\t_____ SOON DEAD__\n",
 			"\t\t|'''''''''''''''|\n\t\t|               O\n\t\t|                  \n\t\t|                 \n\t\t_____ YOU DIED___\n",
 	)
-	print(hanged)
+	print(hanged[index])
 
 def show_menu(player):
 	print("\n\n\t\t==========  Bienvenue ", player, "sur le jeu du pendu !  ==========\n\n")

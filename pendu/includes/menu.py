@@ -3,8 +3,8 @@
 import player
 import sys
 
+
 def main_menu():
-    
     # - Menu principal du jeu -
 
     print("\t\n\t\t===  Main menu ===\n\t")

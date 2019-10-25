@@ -1,11 +1,6 @@
 # config: utf-8
 
-import copy, json
-from includes.from_file_to_game import *
-import sys, os, platform
 from includes.pendu import *
-from includes.show_hanged import *
-
 
 def print_player_list():
 

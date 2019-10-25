@@ -1,10 +1,10 @@
 # config: utf-8
 
 import random, time, os, platform, sys
-from includes.menu import *
 from includes.show_hanged import *
 from includes.check_letter import *
 from includes.from_file_to_game import *
+from includes.menu import main_menu
 
 """ Module principal pour le jeu du Pendu.
 """
@@ -58,17 +58,18 @@ def pendu(secret_word):
 	time.sleep(4)
 
 def go_pendu(player):
-    
-    # - Chargement + lancement du jeu [Récupération du mot mystère + lancement de la fonction 'pendu'] -
 
-    distrib = platform.system()
-    playing = bool(show_menu(player))
-    while playing:
-        secret_word = get_secret_word()
-        pendu(secret_word)
-        if distrib == "Windows":
-            os.system("cls")
-        else:
-            os.system("clear")
-        playing = bool(show_menu(player))
-    main_menu()
+	# - Chargement + lancement du jeu [Récupération du mot mystère + lancement de la fonction 'pendu'] -
+
+	distrib = platform.system()
+	playing = bool(show_menu(player))
+	while playing:
+		secret_word = get_secret_word()
+		pendu(secret_word)
+		if distrib == "Windows":
+			os.system("cls")
+		else:
+			os.system("clear")
+		playing = bool(show_menu(player))
+	main_menu()
+
